@@ -59,7 +59,7 @@ server.post('/api/send', (req, res) => {
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
-        secure: true,
+        secure: false,
         auth: {
             user: UNAME,
             pass: PWORD
