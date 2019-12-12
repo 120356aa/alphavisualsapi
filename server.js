@@ -62,8 +62,8 @@ server.post('/api/send', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: UNAME,
-            pass: PWORD
+            user: 'stuntlyfee@gmail.com',
+            pass: 'H@cked123'
         }
     });
 
