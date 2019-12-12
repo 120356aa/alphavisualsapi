@@ -1,7 +1,7 @@
+const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 require('dotenv').config();
-const express = require('express');
 const helmet = require('helmet');
 // const stripe = require('stripe')('pk_live_AUzulzbWhPDJgwGRez3gHcBB00oJ5lfR7v');
 // const uuid = require('uuid/v4');
