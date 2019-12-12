@@ -67,7 +67,7 @@ server.post('/api/send', (req, res) => {
     });
 
     function MailTo(photographer) {
-        if (photographer === 'casey') return 'casey@alphavnw.com';
+        if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
         if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
         if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
         if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
