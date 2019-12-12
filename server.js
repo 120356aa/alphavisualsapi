@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
 require('dotenv').config();
 const helmet = require('helmet');
 // const stripe = require('stripe')('pk_live_AUzulzbWhPDJgwGRez3gHcBB00oJ5lfR7v');
@@ -62,8 +61,8 @@ server.post('/api/send', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'stuntlyfee@gmail.com',
-            pass: 'H@cked123'
+            user: UNAME,
+            pass: PWORD
         }
     });
 
