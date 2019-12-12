@@ -66,17 +66,22 @@ server.post('/api/send', (req, res) => {
         }
     });
 
-    function MailTo(photographer) {
-        if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
-        if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
-        if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
-        if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
-    }
+    // function MailTo(photographer) {
+    //     if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+    //     if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
+    //     if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
+    //     if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
+    // }
 
     let mailOptions = {
         from: `${req.body.email}`,
-        // to: MailTo(req.body.photographer),
-        to: 'yurlovandrew@gmail.com',
+        to: function() {
+            if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+            if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
+            if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
+            if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
+        },
+        // to: 'yurlovandrew@gmail.com',
         subject: 'Photoshoot Request',
         html: Consultation(req.body),
     };
