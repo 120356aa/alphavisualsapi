@@ -66,7 +66,8 @@ server.post('/api/send', (req, res) => {
         }
     });
 
-    function MailTo(photographer) {
+    function MailTo(photographer, video) {
+        if (video === 'yes') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com']
         if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
         if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
         if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
@@ -75,7 +76,7 @@ server.post('/api/send', (req, res) => {
 
     let mailOptions = {
         from: `${req.body.email}`,
-        to: MailTo(req.body.photographer),
+        to: MailTo(req.body.photographer, req.body.video),
         // to: 'yurlovandrew@gmail.com',
         subject: 'Photoshoot Request',
         html: Consultation(req.body),

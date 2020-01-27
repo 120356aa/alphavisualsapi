@@ -7,7 +7,9 @@ const Consultation = data => {
         Preferred Time: ${data.time},
         Photographer: ${data.photographer},
         Shoot: ${data.shoot},
-        Message: ${data.comment}
+        Message: ${data.comment},
+        DJ: ${data.dj},
+        Video: ${data.video}
         `
     )
 }
