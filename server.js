@@ -81,8 +81,8 @@ server.post('/api/send', (req, res) => {
 
     let mailOptions = {
         from: `${req.body.email}`,
-        // to: MailTo(req.body.photographer),
-        to: 'casey@alphavnw.com',
+        to: MailTo(req.body.photographer),
+        subject: 'Photoshoot Request',
         html: Consultation(req.body),
     };
 
