@@ -73,17 +73,15 @@ server.post('/api/send', (req, res) => {
         if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
         if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
 
-        if (photographer === 'bryan' && video === 'yes') return ['bryan@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
-        if (photographer === 'chris' && video === 'yes') return ['chris@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
-        if (photographer === 'jonny' && video === 'yes') return ['jonny@alphavnw.com',  'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
+        // if (photographer === 'bryan' && video === 'yes') return ['bryan@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
+        // if (photographer === 'chris' && video === 'yes') return ['chris@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
+        // if (photographer === 'jonny' && video === 'yes') return ['jonny@alphavnw.com',  'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
 
     }
 
     let mailOptions = {
         from: `${req.body.email}`,
-        to: MailTo(req.body.photographer, req.body.video),
-        // to: 'yurlovandrew@gmail.com',
-        subject: 'Photoshoot Request',
+        to: MailTo(req.body.photographer),
         html: Consultation(req.body),
     };
 
