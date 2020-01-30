@@ -57,7 +57,7 @@ server.post('/checkout', async (req, res) => {
 
 server.post('/api/send', (req, res) => {
     let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        service: 'gmail',
         port: 465,
         secure: true,
         auth: {
