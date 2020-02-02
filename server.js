@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 const UNAME = process.env.UNAME;
 const PWORD = process.env.PWORD;
 const bodyParser = require('body-parser');
-const sendGrid = require('@sendGrid/mail');
+// const sendGrid = require('@sendgrid/mail');
 const nodemailer = require('nodemailer');
 const { Consultation } = require('./templates/consultation');
 
