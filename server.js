@@ -81,12 +81,15 @@ server.post('/api/send', (req, res) => {
 
     }
 
+    let email_arr = ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+
     let mailOptions = {
         from: `${req.body.email}`,
-        to: () => {
-            if (req.body.photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
-        },
+        // to: () => {
+        //     if (req.body.photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+        // },
         // to: MailTo(req.body.photographer),
+        to: email_arr,
         subject: 'Photoshoot Request',
         html: Consultation(req.body),
     };
