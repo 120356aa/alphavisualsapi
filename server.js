@@ -83,7 +83,9 @@ server.post('/api/send', (req, res) => {
 
     let mailOptions = {
         from: `${req.body.email}`,
-        to: 'yurlovandrew@gmail.com',
+        to: () => {
+            if (req.body.photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+        },
         // to: MailTo(req.body.photographer),
         subject: 'Photoshoot Request',
         html: Consultation(req.body),
