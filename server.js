@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 const UNAME = process.env.UNAME;
 const PWORD = process.env.PWORD;
 const bodyParser = require('body-parser');
+const sendGrid = require('@sendGrid/mail');
 const nodemailer = require('nodemailer');
 const { Consultation } = require('./templates/consultation');
 
@@ -18,6 +19,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
+
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -61,12 +63,12 @@ server.post('/api/send', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: UNAME,
-            pass: PWORD
+            user: 'stuntlyfee@gmail.com',
+            pass: 'H@cked123'
         }
     });
 
-    function MailTo(photographer, video) {
+    function MailTo(photographer) {
         // if (video === 'yes') return ['casey@alphavnw.com', 'tocatchfilms@gmail.com']
         if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
         if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
