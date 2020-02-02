@@ -81,7 +81,13 @@ server.post('/api/send', (req, res) => {
 
     }
 
-    let email_arr = ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
+    let email_arr = [
+        'casey@alphavnw.com',
+        'yurlovandrew@gmail.com',
+        'bryan@alphavnw.com',
+        'chris@alphavnw.com',
+        'jonny@alphavnw.com',
+    ];
 
     let mailOptions = {
         from: `${req.body.email}`,
