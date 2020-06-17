@@ -70,10 +70,10 @@ server.post('/api/send', (req, res) => {
 
     function MailTo(photographer) {
         // if (video === 'yes') return ['casey@alphavnw.com', 'tocatchfilms@gmail.com']
-        if (photographer === 'casey') return ['casey@alphavnw.com', 'yurlovandrew@gmail.com'];
-        if (photographer === 'bryan') return ['bryan@alphavnw.com', 'casey@alphavnw.com'];
-        if (photographer === 'chris') return ['chris@alphavnw.com', 'casey@alphavnw.com'];
-        if (photographer === 'jonny') return ['jonny@alphavnw.com',  'casey@alphavnw.com'];
+        if (photographer === 'casey') return ['alphavnw@gmail.com', 'yurlovandrew@gmail.com'];
+        if (photographer === 'bryan') return ['bryan@alphavnw.com', 'alphavnw@gmail.com'];
+        if (photographer === 'chris') return ['chris@alphavnw.com', 'alphavnw@gmail.com'];
+        if (photographer === 'jonny') return ['jonny@alphavnw.com',  'alphavnw@gmail.com'];
 
         // if (photographer === 'bryan' && video === 'yes') return ['bryan@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
         // if (photographer === 'chris' && video === 'yes') return ['chris@alphavnw.com', 'casey@alphavnw.com', 'tocatchfilms@gmail.com'];
@@ -82,7 +82,7 @@ server.post('/api/send', (req, res) => {
     }
 
     let email_arr = [
-        'casey@alphavnw.com',
+        'alphavnw@gmail.com',
         // 'yurlovandrew@gmail.com',
         // 'bryan@alphavnw.com',
         // 'chris@alphavnw.com',
